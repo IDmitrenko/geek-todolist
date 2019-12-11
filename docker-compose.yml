@@ -6,7 +6,7 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: Helsinki2018
       POSTGRES_DB: todo_app_db
     ports:
       - 5432:5432

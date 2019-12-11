@@ -35,5 +35,13 @@ public class UserAuthService implements UserDetailsService {
                 optUser.get().getPassword(),
                 Collections.singletonList(new SimpleGrantedAuthority("USER"))
         );
+/*
+        return userRepository.getUserByUsername(username)
+                .map(user -> new org.springframework.security.core.userdetails.User(
+                        user.getUsername(),
+                        user.getPassword(),
+                        Collections.singletonList(new SimpleGrantedAuthority("USER"))))
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+*/
     }
 }
